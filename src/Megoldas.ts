@@ -8,6 +8,22 @@ export default class Megoldás {
         return this.#hiányzók.length;
     }
 
+    get osszIgazolt(): number {
+        let ossz: number = 0;
+        for (const h of this.#hiányzók) {
+            ossz += h.igazoltDb;
+        }
+        return ossz;
+    }
+
+    get osszIgazolatlan(): number {
+        let ossz: number = 0;
+        for (const h of this.#hiányzók) {
+            ossz += h.igazolatlanDb;
+        }
+        return ossz;
+    }
+
     constructor(forrás: string) {
         let aktDátum: string = "";
         fs.readFileSync(forrás)
