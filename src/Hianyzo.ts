@@ -1,3 +1,5 @@
+import Segéd from "./Seged";
+
 export default class Hianyzo {
     #név: string;
     #hónap: number;
@@ -30,5 +32,10 @@ export default class Hianyzo {
             }
         }
         return db;
+    }
+
+    volt_hianyzas(nap: string, óra: number): boolean {
+        const óraIndexe: number = óra - 1;
+        return nap === Segéd.hetNapja(this.#hónap, this.#nap) && (this.#mulasztások[óraIndexe] === "X" || this.#mulasztások[óraIndexe] === "I");
     }
 }
