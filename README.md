@@ -1,2 +1,2 @@
 # Hianyzasok-13KE
-Minta
+2017. október 25. informatika emelt szintű programozási feladata.
