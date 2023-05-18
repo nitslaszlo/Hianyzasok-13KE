@@ -27,7 +27,9 @@ export default class Content {
 
         const m: Megoldás = new Megoldás("naplo.txt");
 
-        res.write(`2. feladat: A naplóban ${m.bejegyzésekSzáma} bejegyzés van \n`);
+        res.write(`2. feladat\nA naplóban ${m.bejegyzésekSzáma} bejegyzés van.\n`);
+        res.write(`3. feladat\nAz igazolt hiányzások száma: ${m.osszIgazolt}, az igazolatlanoké ${m.osszIgazolatlan} óra.\n`);
+
         // let korod = parseInt(params.get("kor") as string);
         // if (isNaN(korod)) korod = 18;
         // res.write(`<label>Kérem a korod: <input type='number' name='kor' value=${korod} style='max-width:100px;' onChange='this.form.submit();'></label>\n`);
