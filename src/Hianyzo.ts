@@ -2,7 +2,7 @@ export default class Hianyzo {
     #név: string;
     #hónap: number;
     #nap: number;
-    #mulasztások: string; // A napi hiányzást leíró minta O, I, X és N karakterekből áll
+    #mulasztások: string;
 
     constructor(dátumSor: string, adatsor: string) {
         let m: string[] = dátumSor.split(" ");
