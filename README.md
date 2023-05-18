@@ -1,2 +1,10 @@
 # Hianyzasok-13KE
-Minta
+
+Fejlesztők:
+Celina
+Norbi
+Sanyi
+Csaba
+Zoárd
+Szilárd
+Mátyás
