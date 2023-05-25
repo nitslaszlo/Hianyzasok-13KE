@@ -18,4 +18,13 @@ describe("Hianyzo osztály unit tesztek", () => {
         expect(tan1.igazoltDb).toBe(6);
         expect(tan2.igazoltDb).toBe(0);
     });
+
+    it("voltHiányzás() metódus teszje", async () => {
+        expect(tan1.volt_hianyzas("hetfo", 1)).toBe(false);
+        expect(tan1.volt_hianyzas("hetfo", 2)).toBe(true);
+        expect(tan1.volt_hianyzas("kedd", 1)).toBe(false);
+        expect(tan1.volt_hianyzas("kedd", 2)).toBe(false);
+        expect(tan2.volt_hianyzas("kedd", 6)).toBe(true);
+        expect(tan2.volt_hianyzas("kedd", 7)).toBe(false);
+    });
 });

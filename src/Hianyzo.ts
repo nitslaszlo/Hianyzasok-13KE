@@ -6,12 +6,20 @@ export default class Hianyzo {
     #nap: number;
     #mulasztások: string;
 
+    get név(): string {
+        return this.#név;
+    }
+
     get igazolatlanDb(): number {
         return this.#megszamol("I");
     }
 
     get igazoltDb(): number {
         return this.#megszamol("X");
+    }
+
+    get hianyzasDb(): number {
+        return this.igazolatlanDb + this.igazoltDb;
     }
 
     constructor(dátumSor: string, adatsor: string) {

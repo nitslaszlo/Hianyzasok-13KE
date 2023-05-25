@@ -1,6 +1,6 @@
 import Megoldas from "../Megoldas";
 
-describe("Hianyzo osztály unit tesztek", () => {
+describe("Megoldás osztály unit tesztek", () => {
     const mego1: Megoldas = new Megoldas("naplo.txt");
 
     it("osztálypéldány ellenőrzése", async () => {
@@ -17,5 +17,13 @@ describe("Hianyzo osztály unit tesztek", () => {
 
     it("OsszIgazolat hiányzás", async () => {
         expect(mego1.osszIgazolt).toBe(788);
+    });
+
+    it("MegszámolHiányzás() metódus tesztje", async () => {
+        expect(mego1.megszamolHiányzások("szerda", 3)).toBe(49);
+    });
+
+    it("Legtöbbet hiányzó tnulók", async () => {
+        expect(mego1.legtöbbetHiányzóTanulók).toStrictEqual(["Kivi Adrienn", "Jujuba Ibolya"]);
     });
 });
